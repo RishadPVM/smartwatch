@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
-.header{
+body{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(5,0,136,0.5),rgba(64, 64, 145, 0.5)),url(../image/back.jpg);
@@ -12,66 +12,63 @@
     background-size: cover;
     overflow-x: hidden;
 }
-nav{
-    width: 100%;
-    display: flex; 
-    text-align: center;
-   justify-content: space-between;
-    align-items: center;
-    padding: 18px 8%;
-    transition: background 1s;
+header{
+    z-index: 1;
+    transition:1s;
+   padding-left:30px;
+   padding-right: 30px;
+    position: absolute !important;
 
 }
-nav .logo{
-    display: flex;
-    align-items: center;
-    font-size: 26px;
-    font-weight: 600;
-    color: #fff;
-
-}
-nav .logo img{
-    width: 60px;
+.logo img{
+    width: 50px;
     margin-right: 10px;
+}
+.logo span{
+    font-size: 30px;
+    color:rgb(247, 245, 245);
+   font: bold;
+   
+    
+}
 
+.nav-bar:hover{
+    background-color:#23058fde;/*#3789e7de*/
+    border-color: #0707079a !important;
+    color:black;
 }
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+
+.navbar-light .navbar-toggler {
+    color: #e2c6c6c0 !important;
+    
     
 }
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
+.nav-item{
+    padding: 5px 25px;
 }
-nav:hover{
-    background: #fff;
-    
-}
-nav:hover .logo{
-    color: #333;
-}
-nav:hover ul li a{
-    color: #333;
-}
+
 .content{
-    margin-top: 9%;
+  /*  margin-top: 38%; */
+    padding-right: 500px ;
+    margin-top: 23vh;
     margin-left: 9%;
-    margin-right:6%
-    color: #fff;
+    margin-right: 5%;
+    color: rgba(252, 252, 252, 0.74); 
+    z-index: 0;
+    position:fixed;
 }
 .content h1{
-    font-size: 670%;
-   /* line-height: 140px; */
+    font-size: 670%;/*120
+    line-height: 140px; */
     font-weight: 600;
+    
 
 }
 .content p{
     max-width: 500px;
     line-height: 28px;
     opacity: 0;
+    
 }
 .links{
     margin-top: 30px;
@@ -82,11 +79,24 @@ nav:hover ul li a{
     text-decoration: none;
     display: inline-block;
 }
-.btn{
+.btns{
     border: 2px solid #fff;
     padding: 10px 35px;
     border-radius: 30px;
     margin-right: 15px;
+}
+.btns:hover{
+    color: #fff ;
+    background-color: #3789e7de;
+    border: 2px solid #fff;
+    padding: 10px 33px;
+    font-weight: bold;
+}
+.slide-left .contact{
+    color: #fff;
+}
+.slide-left .contact:hover{
+    color: rgba(33, 33, 248, 0.918);
 }
 .slide-left{
     animation: slideleft 1s linear forwards;
@@ -106,4 +116,16 @@ p.slide-left{
 }
 .links.slide-left{
     animation-delay: 2s;
+}
+@media(max-width:830px) {
+    .content h1 {
+        font-size: 580%;
+        font-weight: 600;
+    }
+    .nav-bar:hover{
+        background-color: transparent;
+    }
+    .nav-item li{
+       margin-right: 200px !important;
+    }
 }
